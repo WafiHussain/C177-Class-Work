@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Composing Components</title>
+    <!-- Tailwind CDN -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="root">React has not rendered</main>
+
+    <!-- React CDNs -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Babel CDN -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- REACT CODE -->
+    <script type="text/babel">
+      function Header()  {
+      return (
+        <header className="w-9/12 mx-auto py-8 flex items-center ">
+          <img
+            className="mr-12"
+            src="./assets/images/logo.svg"
+            alt="compnanyLogo"
+          />
+          <nav className="flex  text-xl capitalize font-semibold space-x-8 ">
+            <a className="hover:text-purple-600" href="#home">
+              home
+            </a>
+            <a className="hover:text-purple-600" href="#about">
+              about
+            </a>
+            <a className="hover:text-purple-600" href="#blog">
+              blog
+            </a>
+          </nav>
+        </header>
+      );
+      }
+
+      function BlogPost() {
+      return (
+    <article className="w-1/3  min-w-min m-8  flex flex-col  shadow-xl rounded-lg relative ">
+      <div className="w-full h-2/5 overflow-hidden rounded-t-lg relative">
+        <img
+          className="object-cover w-full "
+          src={blogImage}
+          alt="man in the wild"
+        />
+      </div>
+      <div className="w-full flex flex-col p-4 ">
+        <h3 className="text-2xl font-bold p-2 capitalize">{blogTitle}</h3>
+        <p className="p-2 text-gray-600">{blogDescription}</p>
+        <a
+          className="my-2 mt-8 py-2 text-white  text-center font-semibold bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50  rounded-xl"
+          href={blogLink}
+        >
+          Read more
+        </a>
+      </div>
+    </article>
+  );
+      }
+
+      function SuggestedReads() {
+      return (
+        <section className=" overflow-hidden bg-purple-50">
+          <div className="w-9/12 mx-auto pt-6">
+            <h2 className="font-bold text-3xl">Suggested Readings</h2>
+            <div className="flex justify-center h-full ">
+              <BlogCard
+                blogImage="./assets/images/exerciseComponentComposition02.jpg"
+                blogTitle="Responsive CSS"
+                blogDescription="Dolor sit amet, consectetur adipiscing elit, lorem ipsum sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                blogLink="/#"
+              />
+              <BlogCard
+                blogImage="./assets/images/exerciseComponentComposition03.jpg"
+                blogTitle="never stop exploring"
+                blogDescription="Dolor sit amet, consectetur adipiscing elit, lorem ipsum sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                blogLink="/#"
+              />
+            </div>
+          </div>
+        </section>
+      );
+      }
+
+      function Footer()  {
+      return (
+        <footer className="w-7/12 mx-auto py-8 text-center">
+          <p className="mx-auto text-sm font-thin">Copyright &copy; 2021</p>
+        </footer>
+      );
+      }
+
+      function App() {
+        return (
+          <>
+         <Header />, 
+        <BlogPost />, 
+        <SuggestedReads />,
+        <Footer />
+        </>
+        );
+      }
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
+  
