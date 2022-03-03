@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.sg.classroster.dao.TeacherDaoDBTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 4.099 s <<< FAILURE! - in com.sg.classroster.dao.TeacherDaoDBTest
+testUpdateTeacher  Time elapsed: 1.013 s  <<< ERROR!
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sg.classroster.dao.TeacherDaoDBTest.setUp(TeacherDaoDBTest.java:55)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sg.classroster.dao.TeacherDaoDBTest.setUp(TeacherDaoDBTest.java:55)
+
+testDeleteTeacherById  Time elapsed: 1.029 s  <<< ERROR!
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sg.classroster.dao.TeacherDaoDBTest.setUp(TeacherDaoDBTest.java:55)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sg.classroster.dao.TeacherDaoDBTest.setUp(TeacherDaoDBTest.java:55)
+
+testAddAndGetTeacher  Time elapsed: 1.024 s  <<< ERROR!
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sg.classroster.dao.TeacherDaoDBTest.setUp(TeacherDaoDBTest.java:55)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sg.classroster.dao.TeacherDaoDBTest.setUp(TeacherDaoDBTest.java:55)
+
+testGetAllTeachers  Time elapsed: 1.027 s  <<< ERROR!
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sg.classroster.dao.TeacherDaoDBTest.setUp(TeacherDaoDBTest.java:55)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sg.classroster.dao.TeacherDaoDBTest.setUp(TeacherDaoDBTest.java:55)
+
